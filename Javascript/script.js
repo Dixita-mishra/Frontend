@@ -50,15 +50,36 @@
 //   console.log(calculate('add',1,3,3,4,5,));
 
 //Array methods
-const arr=[1,2,3,4];
+//const arr=[1,2,3,4];
 // arr.shift(); //removes first element
 // console.log(arr);
 // arr.unshift(0);//adds element at the begininng
 // console.log(arr);
-const arr2=[5,6,7,8,3];
-const newArr=arr.concat(arr2);//combines two arrays
+// const arr2=[5,6,7,8,3];
+// const newArr=arr.concat(arr2);//combines two arrays
+// console.log(newArr);
+// const index5=newArr.indexOf(5);//gives index of element
+// console.log(index5);
+// const lastIndex=newArr.lastIndexOf(3);//gives last index of element
+// console.log(lastIndex);
+const arr=[1,2,3,4,5,6,66,7,8,99];
+
+const answer=arr.find((num)=>{
+  return num%33===0;
+});
+console.log(answer);
+
+const answer2=arr.findIndex((num)=>{
+  return num%33===0;
+});
+console.log(answer2);
+
+const answer3=arr.filter((num)=>{
+  return num%33===0;
+});
+console.log(answer3);
+
+const newArr=arr.map((num,index)=>{
+  return num*index;
+});
 console.log(newArr);
-const index5=newArr.indexOf(5);//gives index of element
-console.log(index5);
-const lastIndex=newArr.lastIndexOf(3);//gives last index of element
-console.log(lastIndex);
