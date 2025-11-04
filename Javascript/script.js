@@ -62,24 +62,48 @@
 // console.log(index5);
 // const lastIndex=newArr.lastIndexOf(3);//gives last index of element
 // console.log(lastIndex);
-const arr=[1,2,3,4,5,6,66,7,8,99];
+// const arr=[1,2,3,4,5,6,66,7,8,99];
 
-const answer=arr.find((num)=>{
-  return num%33===0;
-});
-console.log(answer);
+// const answer=arr.find((num)=>{
+//   return num%33===0;
+// });
+// console.log(answer);
 
-const answer2=arr.findIndex((num)=>{
-  return num%33===0;
-});
-console.log(answer2);
+// const answer2=arr.findIndex((num)=>{
+//   return num%33===0;
+// });
+// console.log(answer2);
 
-const answer3=arr.filter((num)=>{
-  return num%33===0;
-});
-console.log(answer3);
+// const answer3=arr.filter((num)=>{
+//   return num%33===0;
+// });
+// console.log(answer3);
 
-const newArr=arr.map((num,index)=>{
-  return num*index;
-});
-console.log(newArr);
+// const newArr=arr.map((num,index)=>{
+//   return num*index;
+// });
+// console.log(newArr);
+// let fun=x=>x%2===0?true:false;
+// console.log(fun(4));
+// 
+//  const user="Dixita";
+//  const points=120;
+//   const score=`${user} has ${points} points`;
+const person={
+  firstName:"Dixita",
+  lastName:"Mishra",
+  age:18,
+  introduce:function(){
+    console.log(`Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`);
+},
+};
+const {firstName as fn, lastName as ln}=person;
+console.log(fn);
+console.log(ln);
+// person.
+// person.intro=function(){console.log(`Hi, I'm ${this.firstName}.`);};
+// person.intro(); 
+
+// const fruits=["apple","banana","mango","orange","grape"];
+// const [,secondFruit,,,fifthFruit]=fruits;
+
