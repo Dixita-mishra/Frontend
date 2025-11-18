@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBox" placeholder="Add the Task">
+    <button id="btn">Add Task</button>
+    <button id="removeBtn">Remove Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        const input=document.getElementById('inputBox');
+        const btn=document.getElementById('btn');
+        const list=document.getElementById('taskList');
+        const remove=document.getElementById('removeBtn');
+        const edit=document.getElementById('editBtn');
+        btn.addEventListener('click',()=>{
+            const task=input.value;
+            if(task!==""){
+                const li=document.createElement('li');
+                li.textContent=task;
+                const edit=document.createElement('button');
+                edit.textContent='edit task';
+                list.appendChild(li);
+                li.appendChild(edit);
+                input.value="";
+            }});
+            list.addEventListener('click',(event)=>{
+                if(event.target.nodeName=='button'){
+
+                    const item = event.target.parentElement;
+
+                if (event.target.textContent === 'edit task') {
+                    const inputEdit = document.createElement('input');
+                    inputEdit.type = 'text';
+                    inputEdit.value = item.firstChild.nodeValue;
+                     item.insertBefore(inputEdit, item.firstChild);
+                    item.removeChild(item.firstChild.nextSibling);
+                     event.target.textContent = 'save task';
+                }
+                else if (event.target.textContent === 'save task') {
+                    const inputEdit = item.querySelector('input');
+                    const newText = inputEdit.value;
+                    const newTextNode = document.createTextNode(newText);
+                    item.insertBefore(newTextNode, inputEdit);
+                    item.removeChild(inputEdit);
+
+                    event.target.textContent = 'edit task';
+                    
+                } 
+
+            }});
+            remove.addEventListener('click',()=>{
+                const task=input.value;
+               const taskList=document.querySelectorAll('li');
+                taskList.forEach(tsk=>{
+                    if(tsk.textContent==task){
+                        tsk.remove();
+                    }
+                })
+                input.value='';
+            });
+        
+
+    </script>
+</body>
+</html>

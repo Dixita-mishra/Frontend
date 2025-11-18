@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+        }
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            border: solid black 2px;
+            padding:20px;
+            border-radius:10px;
+
+        }
+        button{
+            border-radius: 7px;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName"><br>
+        <label for="motto" >Motto:</label>
+        <input type="text" id="motto" name="motto"><br>
+        <label for="logo" >Logo URL:</label>
+        <input type="url" id="logo" name="logo"><br>
+        <button type="submit" id="submit">submit</button>
+        <button type="reset" id="reset">reset</button>
+    </form>
+    <div id="card"></div>
+     <script src="script.js"></script>
+</body>
+</html>
