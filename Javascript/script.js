@@ -97,12 +97,12 @@ const person={
     console.log(`Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`);
 },
 };
-const {firstName as fn, lastName as ln}=person;
+const {firstName as: fn, lastName as: ln}=person;
 console.log(fn);
 console.log(ln);
 // person.
 // person.intro=function(){console.log(`Hi, I'm ${this.firstName}.`);};
-// person.intro(); 
+// person.intro();  
 
 // const fruits=["apple","banana","mango","orange","grape"];
 // const [,secondFruit,,,fifthFruit]=fruits;
